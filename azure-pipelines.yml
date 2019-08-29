@@ -15,4 +15,4 @@ variables:
 steps:
 - script: dotnet build /home/vsts/work/1/s/VersionTest/VersionTest.sln
   displayName: 'dotnet build $(buildConfiguration)'
-- powershell: \home\vsts\work\1\s\VersionTest\my-script.ps1
+- powershell: .\my-script.ps1
