@@ -15,6 +15,9 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
+- checkout: self
+  persistCredentials: true
+  clean: true
 - powershell: |
    Write-Host "Branch Name:"
    git checkout dev
@@ -22,9 +25,11 @@ steps:
 - script: dotnet build /home/vsts/work/1/s/VersionTest/VersionTest.sln
   displayName: 'dotnet build $(buildConfiguration)'
 - powershell: |
+   git config user.email zhao@janatechnology.com
+   git config user.name "Version Updater"
    git add -A
    Write-Host "git commit with message"
    git commit -a -m "$(Build.BuildNumber)"
    Write-Host "git push"
-   git push https://halonazhao:Z1995y09z01*@github.com/halonazhao/versionAssemblies 
+   git push
 
