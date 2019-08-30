@@ -68,9 +68,8 @@ $NewVersion = $VersionData[0]
 Write-Verbose "Version: $NewVersion"
 
 Write-Warning "PathPath: $Env:BUILD_SOURCESDIRECTORY"
-Write-Warning "PathPath: $_.FullName"
 # Apply the version to the assembly property files
-$files = gci -Path $_.FullName -Recurse -include *.csproj
+$files = gci $Env:BUILD_SOURCESDIRECTORY -Recurse -include *.csproj
 if($files)
 {
 	Write-Verbose "Will apply $NewVersion to $($files.count) files."
