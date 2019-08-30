@@ -22,10 +22,6 @@ steps:
 - script: dotnet build /home/vsts/work/1/s/VersionTest/VersionTest.sln
   displayName: 'dotnet build $(buildConfiguration)'
 - powershell: |
-   Write-Host "Branch Name:"
-   git config --global url."https://github.com/halonazhao/versionAssemblies.git".insteadOf "https://github.com/"
-   git config user.email zhao@janatechnology.com
-   git config user.name "Version Updater"
    git add -A
    Write-Host "git commit with message"
    git commit -a -m "$(Build.BuildNumber)"
