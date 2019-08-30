@@ -67,7 +67,7 @@ switch($VersionData.Count)
 $NewVersion = $VersionData[0]
 Write-Verbose "Version: $NewVersion"
 
-Write-Verbose "Version: $Env:BUILD_SOURCESDIRECTORY"
+Write-Warning "PathPath: $Env:BUILD_SOURCESDIRECTORY"
 # Apply the version to the assembly property files
 $files = gci $Env:BUILD_SOURCESDIRECTORY -recurse -include "*Properties*","My Project" | 
 	?{ $_.PSIsContainer } | 
