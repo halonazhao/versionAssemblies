@@ -23,7 +23,7 @@ steps:
   displayName: 'dotnet build $(buildConfiguration)'
 - powershell: |
    git config --global user.email "halona.zhao@gmail.com"
-   git config --global user.name "Your Name"
+   git config --global user.name "halonaZhao"
    git add -A
    Write-Host "git commit with message"
    git commit -a -m "$(Build.BuildNumber)"
