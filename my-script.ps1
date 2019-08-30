@@ -69,7 +69,7 @@ Write-Verbose "Version: $NewVersion"
 
 Write-Warning "PathPath: $Env:BUILD_SOURCESDIRECTORY"
 # Apply the version to the assembly property files
-$files = gci $Env:BUILD_SOURCESDIRECTORY -recurse -include  *.csproj| 
+$files = gci -Path $_.FullName -Recurse -include *.csproj| 
 	?{ $_.PSIsContainer } | 
 	foreach { gci -Path $_.FullName -Recurse -include AssemblyInfo.* }
 if($files)
