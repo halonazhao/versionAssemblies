@@ -76,7 +76,7 @@ if($files)
 	
 	foreach ($file in $files) {
 		$filecontent = Get-Content($file)
-		$filecontent -replace $VersionRegex, $NewVersion | Out-File $file
+		$filecontent -replace "2019.0830.9", $NewVersion | Out-File $file
 		Write-Warning "$file - version $NewVersion applied"
 	}
 }
