@@ -22,13 +22,9 @@ steps:
 - script: dotnet build /home/vsts/work/1/s/VersionTest/VersionTest.sln
   displayName: 'dotnet build $(buildConfiguration)'
 - powershell: |
-   env GIT_TERMINAL_PROMPT=1 go get https://github.com/halonazhao/versionAssemblies
-   git config --global --add url."https://github.com/".insteadOf "git@github.com:"
-   git config --global user.email "halona.zhao@gmail.com"
-   git config --global user.name "halonaZhao"
    git add -A
    Write-Host "git commit with message"
    git commit -a -m "$(Build.BuildNumber)"
    Write-Host "git push"
-   git push origin dev
+   git push https:// GIT_PAT@github.com/halonazhao/versionAssemblies.git
 
