@@ -5,7 +5,7 @@
   },
   "projects": {
     "\\\\filesrv2\\users$\\zhao\\Desktop\\versionAssemblies\\VersionTest\\VersionTest\\VersionTest.csproj": {
-      "version": "1.0.0",
+      "version": "20190830.9.0",
       "restore": {
         "projectUniqueName": "\\\\filesrv2\\users$\\zhao\\Desktop\\versionAssemblies\\VersionTest\\VersionTest\\VersionTest.csproj",
         "projectName": "VersionTest",

@@ -77,7 +77,7 @@ if($files)
 	foreach ($file in $files) {
 		$filecontent = Get-Content($file)
 		$filecontent -replace $VersionRegex, $NewVersion | Out-File $file
-		Write-Warning "$file.FullName - version applied"
+		Write-Warning "$file - version applied"
 	}
 }
 else
