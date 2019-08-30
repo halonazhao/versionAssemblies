@@ -23,7 +23,7 @@ steps:
   displayName: 'dotnet build $(buildConfiguration)'
 - powershell: |
    Write-Host "Branch Name:"
-   git config --global url."git@github.com:halonazhao/versionAssemblies.git".insteadOf "https://github.com/"
+   git config --global url."https://github.com/halonazhao/versionAssemblies.git".insteadOf "https://github.com/"
    git config user.email zhao@janatechnology.com
    git config user.name "Version Updater"
    git add -A
