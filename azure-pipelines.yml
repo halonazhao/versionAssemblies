@@ -15,6 +15,16 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
+- powershell: .\my-script.ps1
 - script: dotnet build /home/vsts/work/1/s/VersionTest/VersionTest.sln
   displayName: 'dotnet build $(buildConfiguration)'
-- powershell: .\my-script.ps1
+- powershell: |
+   Write-Host "Branch Name:"
+   git config user.email fung@janatechnology.com
+   git config user.name "Version Updater"
+   git add -A
+   Write-Host "git commit with message"
+   git commit -a -m "$(Build.BuildNumber)"
+   Write-Host "git push"
+   git push
+
