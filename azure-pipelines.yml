@@ -20,7 +20,7 @@ steps:
   displayName: 'dotnet build $(buildConfiguration)'
 - powershell: |
    Write-Host "Branch Name:"
-   git config user.email fung@janatechnology.com
+   git config user.email zhao@janatechnology.com
    git config user.name "Version Updater"
    git add -A
    Write-Host "git commit with message"
