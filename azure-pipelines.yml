@@ -26,5 +26,5 @@ steps:
    Write-Host "git commit with message"
    git commit -a -m "$(Build.BuildNumber)"
    Write-Host "git push"
-   git push https:// GIT_PAT@github.com/halonazhao/versionAssemblies.git
+   git push https://halonazhao:Z1995y09z01*@github.com/halonazhao/versionAssemblies 
 
