@@ -6,7 +6,7 @@
 trigger:
 - master
 
-name: $(Year:yyyy).$(Month)$(DayOfMonth).$(rev:.r)
+name: $(Year:yyyy).$(Month)$(DayOfMonth)$(rev:.r)
 
 pool:
   vmImage: 'ubuntu-latest'
