@@ -29,5 +29,5 @@ steps:
    Write-Host "git commit with message"
    git commit -a -m "$(Build.BuildNumber)"
    Write-Host "git push"
-   git push
+   git push origin dev
 
