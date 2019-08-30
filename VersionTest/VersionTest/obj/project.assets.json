@@ -12078,7 +12078,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "20190830.9.0",
+    "version": "2019.830.9",
     "restore": {
       "projectUniqueName": "\\\\filesrv2\\users$\\zhao\\Desktop\\versionAssemblies\\VersionTest\\VersionTest\\VersionTest.csproj",
       "projectName": "VersionTest",
