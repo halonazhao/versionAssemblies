@@ -46,7 +46,7 @@ if (-not $Env:BUILD_BUILDNUMBER)
 	Write-Error ("BUILD_BUILDNUMBER environment variable is missing.")
 	exit 1
 }
-Write-Warning "BUILD_BUILDNUMBER: $Env:BUILD_BUILDNUMBER"
+Write-Warnin "BUILD_BUILDNUMBER: $Env:BUILD_BUILDNUMBER"
 	
 # Get and validate the version data
 $VersionData = [regex]::matches($Env:BUILD_BUILDNUMBER,$VersionRegex)
@@ -69,7 +69,7 @@ Write-Verbose "Version: $NewVersion"
 
 Write-Warning "PathPath: $Env:BUILD_SOURCESDIRECTORY"
 # Apply the version to the assembly property files
-$files = gci $Env:BUILD_SOURCESDIRECTORY -recurse -include "*Properties*","My Project" | 
+$files = gci $Env:BUILD_SOURCESDIRECTORY -recurse -include  *.csproj| 
 	?{ $_.PSIsContainer } | 
 	foreach { gci -Path $_.FullName -Recurse -include AssemblyInfo.* }
 if($files)
